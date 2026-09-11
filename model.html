@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HCare - Phân tích Dữ liệu & Mô hình</title>
+    <title>HCare - Phân tích Dữ liệu Lâm sàng</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
@@ -17,133 +17,108 @@
     <main class="container my-5">
         <!-- Tiêu đề trang -->
         <div class="text-center mb-5">
-            <h2 class="fw-bold text-danger">Phân tích Dữ liệu & Đánh giá Mô hình</h2>
-            <p class="text-muted">Khám phá thông tin chi tiết từ tập dữ liệu lâm sàng và hiệu suất hoạt động của hệ thống phân tích.</p>
+            <h2 class="fw-bold text-danger">Phân tích Số liệu & Bệnh án Lâm sàng</h2>
+            <p class="text-muted">Góc nhìn y khoa được đúc kết từ hàng ngàn hồ sơ khám bệnh thực tế.</p>
         </div>
 
-        <!-- PHẦN 1: KHÁM PHÁ DỮ LIỆU (EDA) -->
+        <!-- PHẦN 1: PHÂN TÍCH NHÂN KHẨU HỌC & LÂM SÀNG -->
         <section class="mb-5">
-            <h4 class="fw-bold text-secondary mb-4"><i class="bi bi-bar-chart-fill me-2"></i>1. Khám phá Dữ liệu (Exploratory Data Analysis)</h4>
+            <h4 class="fw-bold text-secondary mb-4"><i class="bi bi-bar-chart-fill me-2"></i>1. Thống kê xu hướng mắc bệnh</h4>
             <div class="row g-4">
+                <!-- Biểu đồ 1 -->
                 <div class="col-md-6">
                     <div class="card shadow-sm border-0 h-100 p-3">
                         <div class="card-body text-center">
-                            <h5 class="fw-bold mb-3">Phân phối Độ tuổi và Bệnh lý</h5>
-                            <!-- Thay src bằng đường dẫn ảnh biểu đồ EDA thực tế của nhóm, ví dụ: images/eda_age.png -->
+                            <h5 class="fw-bold mb-3">Tỷ lệ theo Độ tuổi & Giới tính</h5>
+                            <!-- Thay src bằng ảnh biểu đồ thực tế sau -->
                             <div class="bg-light border rounded d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <span class="text-muted"><i class="bi bi-image fs-1 d-block mb-2"></i>[Biểu đồ phân phối độ tuổi]</span>
+                                <span class="text-muted"><i class="bi bi-pie-chart fs-1 d-block mb-2"></i>[Biểu đồ Tuổi & Giới tính]</span>
                             </div>
-                            <p class="text-muted small mt-3 text-start">Biểu đồ thể hiện mật độ phân bố bệnh nhân theo độ tuổi, chỉ ra nhóm tuổi từ 50-65 có tỷ lệ mắc các bệnh lý về tim mạch cao nhất trong tập dữ liệu.</p>
+                            <p class="text-muted small mt-3 text-start">
+                                Thống kê cho thấy rủi ro tăng vọt ở nhóm bệnh nhân <strong>trên 50 tuổi</strong>. Đặc biệt, nam giới có tỷ lệ khởi phát bệnh mạch vành sớm hơn nữ giới trung bình khoảng 7-10 năm do tác động từ lối sống (hút thuốc, rượu bia).
+                            </p>
                         </div>
                     </div>
                 </div>
+                <!-- Biểu đồ 2 -->
                 <div class="col-md-6">
                     <div class="card shadow-sm border-0 h-100 p-3">
                         <div class="card-body text-center">
-                            <h5 class="fw-bold mb-3">Tương quan các Chỉ số Lâm sàng</h5>
-                            <!-- Thay src bằng đường dẫn ảnh ma trận tương quan (Correlation Matrix) -->
+                            <h5 class="fw-bold mb-3">Triệu chứng Đau ngực (Chest Pain)</h5>
+                            <!-- Thay src bằng ảnh biểu đồ thực tế sau -->
                             <div class="bg-light border rounded d-flex align-items-center justify-content-center" style="height: 250px;">
-                                <span class="text-muted"><i class="bi bi-image fs-1 d-block mb-2"></i>[Ma trận tương quan Pearson]</span>
+                                <span class="text-muted"><i class="bi bi-activity fs-1 d-block mb-2"></i>[Biểu đồ Tỷ lệ Đau ngực]</span>
                             </div>
-                            <p class="text-muted small mt-3 text-start">Ma trận nhiệt (Heatmap) thể hiện mức độ tương quan giữa các biến như Cholesterol, Huyết áp, Nhịp tim tối đa và biến mục tiêu (Target).</p>
+                            <p class="text-muted small mt-3 text-start">
+                                Đáng chú ý: Hơn <strong>40%</strong> các ca được chẩn đoán mắc bệnh tim nghiêm trọng thuộc nhóm <em>"Không có triệu chứng đau ngực rõ rệt" (Asymptomatic)</em>. Điều này minh chứng cho tính chất "kẻ giết người thầm lặng" của bệnh tim mạch.
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- PHẦN 2: ĐÁNH GIÁ HIỆU SUẤT MÔ HÌNH -->
-        <section class="mb-5">
-            <h4 class="fw-bold text-secondary mb-4"><i class="bi bi-cpu-fill me-2"></i>2. Hiệu suất Mô hình Machine Learning</h4>
-            <div class="row g-4">
-                <div class="col-lg-7">
-                    <div class="card shadow-sm border-0 p-4 h-100">
-                        <h5 class="fw-bold mb-3">Bảng so sánh các thuật toán</h5>
-                        <div class="table-responsive">
-                            <table class="table table-bordered align-middle text-center">
-                                <thead class="table-light">
-                                    <tr>
-                                        <th>Thuật toán</th>
-                                        <th>Accuracy</th>
-                                        <th>Precision</th>
-                                        <th>Recall</th>
-                                        <th>F1-Score</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="fw-semibold">Logistic Regression</td>
-                                        <td>84.5%</td>
-                                        <td>82.1%</td>
-                                        <td>86.0%</td>
-                                        <td>84.0%</td>
-                                    </tr>
-                                    <tr class="table-danger bg-opacity-10">
-                                        <td class="fw-bold text-danger">Random Forest (Được chọn)</td>
-                                        <td class="fw-bold">88.2%</td>
-                                        <td class="fw-bold">87.5%</td>
-                                        <td class="fw-bold">89.0%</td>
-                                        <td class="fw-bold">88.2%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-semibold">XGBoost</td>
-                                        <td>87.1%</td>
-                                        <td>86.0%</td>
-                                        <td>87.5%</td>
-                                        <td>86.7%</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="fw-semibold">Support Vector Machine</td>
-                                        <td>83.0%</td>
-                                        <td>81.5%</td>
-                                        <td>84.0%</td>
-                                        <td>82.7%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <p class="text-muted small mt-2">Mô hình <strong>Random Forest Classifier</strong> đạt hiệu suất tổng thể cao nhất sau quá trình tối ưu hóa siêu tham số (Hyperparameter Tuning).</p>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="card shadow-sm border-0 p-4 h-100 text-center">
-                        <h5 class="fw-bold mb-3">Ma trận Nhầm lẫn (Confusion Matrix)</h5>
-                        <!-- Thay src bằng ảnh Confusion Matrix thực tế của nhóm -->
-                        <div class="bg-light border rounded d-flex align-items-center justify-content-center" style="height: 200px;">
-                            <span class="text-muted"><i class="bi bi-grid-3x3 fs-1 d-block mb-2"></i>[Confusion Matrix]</span>
-                        </div>
-                        <p class="text-muted small mt-3 text-start">Thể hiện tỷ lệ phân loại chính xác giữa các ca thực tế có bệnh và không có bệnh trên tập kiểm thử độc lập.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PHẦN 3: MỨC ĐỘ QUAN TRỌNG CỦA ĐẶC TRƯNG -->
+        <!-- PHẦN 2: HỒ SƠ CHẨN ĐOÁN VÍ DỤ -->
         <section class="mb-4">
-            <h4 class="fw-bold text-secondary mb-4"><i class="bi bi-bar-chart-steps me-2"></i>3. Mức độ quan trọng của các Đặc trưng (Feature Importance)</h4>
-            <div class="card shadow-sm border-0 p-4">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 text-center mb-4 mb-lg-0">
-                        <!-- Thay src bằng ảnh Feature Importance thực tế -->
-                        <div class="bg-light border rounded d-flex align-items-center justify-content-center" style="height: 250px;">
-                            <span class="text-muted"><i class="bi bi-graph-up-arrow fs-1 d-block mb-2"></i>[Biểu đồ Feature Importance]</span>
+            <h4 class="fw-bold text-secondary mb-4"><i class="bi bi-file-medical-fill me-2"></i>2. Các trường hợp chẩn đoán tiêu biểu</h4>
+            <p class="text-muted mb-4">Dưới đây là sự so sánh đối chiếu giữa các hồ sơ bệnh án có rủi ro cao và rủi ro thấp được trích xuất từ cơ sở dữ liệu y tế, giúp bạn hình dung rõ hơn về các chỉ số an toàn.</p>
+            
+            <div class="row g-4">
+                <!-- Case 1: Nguy cơ thấp -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 border-top border-success border-4 h-100">
+                        <div class="card-header bg-white pt-3 pb-0 border-0">
+                            <h5 class="fw-bold text-success"><i class="bi bi-shield-check me-2"></i>Hồ sơ A: Rủi ro thấp (An toàn)</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush small mb-3">
+                                <li class="list-group-item d-flex justify-content-between"><span>Nhân khẩu:</span> <strong>Nữ, 42 tuổi</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Huyết áp lúc nghỉ:</span> <strong>115 mmHg (Tốt)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Cholesterol:</span> <strong>190 mg/dl (Bình thường)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Đau ngực:</span> <strong>Không (Non-anginal)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Nhịp tim tối đa:</span> <strong>170 bpm (Khỏe mạnh)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Đau ngực khi gắng sức:</span> <strong>Không</strong></li>
+                            </ul>
+                            <div class="alert alert-success mt-auto mb-0 py-2">
+                                <strong>Đánh giá:</strong> Chức năng tim mạch hoạt động hoàn toàn bình thường. Mạch máu thông thoáng, tim đáp ứng tốt với bài test vận động gắng sức.
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <h5 class="fw-bold mb-3">Các chỉ số chi phối quyết định của hệ thống</h5>
-                        <p class="text-muted small" style="text-align: justify;">
-                            Thông qua thuật toán phân tích đặc trưng của Random Forest, hệ thống xác định được những chỉ số có tác động mạnh nhất đến việc chẩn đoán nguy cơ bệnh tim gồm:
-                        </p>
-                        <ul class="text-muted small ps-3">
-                            <li class="mb-2"><strong>Thalassemia (Tình trạng huyết sắc tố):</strong> Yếu tố ảnh hưởng lớn nhất.</li>
-                            <li class="mb-2"><strong>Số mạch máu chính (ca):</strong> Phản ánh mức độ tổn thương mạch vành.</li>
-                            <li class="mb-2"><strong>Loại đau ngực (cp):</strong> Triệu chứng lâm sàng cốt lõi.</li>
-                            <li class="mb-2"><strong>Độ chênh ST (oldpeak) & Nhịp tim tối đa (thalach):</strong> Chỉ số phản hồi khi vận động.</li>
-                        </ul>
+                </div>
+
+                <!-- Case 2: Nguy cơ cao -->
+                <div class="col-lg-6">
+                    <div class="card shadow-sm border-0 border-top border-danger border-4 h-100">
+                        <div class="card-header bg-white pt-3 pb-0 border-0">
+                            <h5 class="fw-bold text-danger"><i class="bi bi-exclamation-triangle-fill me-2"></i>Hồ sơ B: Rủi ro cao (Báo động)</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush small mb-3">
+                                <li class="list-group-item d-flex justify-content-between"><span>Nhân khẩu:</span> <strong>Nam, 58 tuổi</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Huyết áp lúc nghỉ:</span> <strong class="text-danger">150 mmHg (Cao)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Cholesterol:</span> <strong class="text-danger">285 mg/dl (Rất cao)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Đau ngực:</span> <strong>Đau thắt không điển hình</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Nhịp tim tối đa:</span> <strong class="text-danger">115 bpm (Yếu)</strong></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Đau ngực khi gắng sức:</span> <strong class="text-danger">Có</strong></li>
+                            </ul>
+                            <div class="alert alert-danger mt-auto mb-0 py-2">
+                                <strong>Đánh giá:</strong> Tồn tại rủi ro tắc nghẽn mạch vành rõ rệt do mảng xơ vữa (Cholesterol cao). Tim bị thiếu máu cục bộ khi phải vận động mạnh.
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- LỜI KHUYÊN DỰA TRÊN SỐ LIỆU -->
+        <section class="mt-5 text-center p-4 bg-light rounded-3">
+            <h5 class="fw-bold mb-3">Bạn có nhận ra sự khác biệt?</h5>
+            <p class="text-muted mb-4" style="max-width: 800px; margin: 0 auto;">Các chỉ số như Huyết áp hay Cholesterol đều có thể được kiểm soát nếu chúng ta phát hiện sớm thông qua khám sức khỏe định kỳ. Đừng đợi đến khi những cơn đau thắt ngực xuất hiện mới hành động.</p>
+            <a href="tool.html" class="btn btn-outline-danger fw-bold rounded-pill px-4">
+                Kiểm tra chỉ số của chính bạn ngay
+            </a>
+        </section>
+
     </main>
 
     <div id="footer-placeholder"></div>
