@@ -1,0 +1,151 @@
+<!-- tool.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCare - Công cụ chuẩn đoán</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="text-center mb-4">
+                    <h2 class="fw-bold text-danger">HCare - Công cụ chuẩn đoán</h2>
+                    <p class="text-muted">Nhập các chỉ số lâm sàng bên dưới để hệ thống tiến hành phân tích và đánh giá.</p>
+                </div>
+
+                <div class="card shadow-sm border-0 p-4">
+                    <form id="prediction-form">
+                        <!-- Nhóm 1: Thông tin cơ bản -->
+                        <h5 class="fw-bold text-secondary mb-3"><i class="bi bi-person-badge me-2"></i>1. Thông tin cơ bản</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Tuổi (Age)</label>
+                                <input type="number" class="form-control" id="age" min="1" max="120" placeholder="Ví dụ: 45" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Giới tính (Sex)</label>
+                                <select class="form-select" id="sex" required>
+                                    <option value="" selected disabled>Chọn giới tính</option>
+                                    <option value="1">Nam</option>
+                                    <option value="0">Nữ</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Nhóm 2: Chỉ số lâm sàng -->
+                        <h5 class="fw-bold text-secondary mb-3"><i class="bi bi-activity me-2"></i>2. Chỉ số Lâm sàng & Sinh hóa</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Loại đau ngực (Chest Pain Type)</label>
+                                <select class="form-select" id="cp" required>
+                                    <option value="" selected disabled>Chọn loại đau ngực</option>
+                                    <option value="0">Đau thắt ngực điển hình (Typical Angina)</option>
+                                    <option value="1">Đau thắt ngực không điển hình (Atypical Angina)</option>
+                                    <option value="2">Không đau thắt ngực (Non-anginal Pain)</option>
+                                    <option value="3">Không có triệu chứng (Asymptomatic)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Huyết áp lúc nghỉ (Resting BP - mmHg)</label>
+                                <input type="number" class="form-control" id="trestbps" placeholder="Ví dụ: 120" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Cholesterol (mg/dl)</label>
+                                <input type="number" class="form-control" id="chol" placeholder="Ví dụ: 200" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Đường huyết lúc đói > 120 mg/dl (FBS)</label>
+                                <select class="form-select" id="fbs" required>
+                                    <option value="" selected disabled>Chọn tình trạng</option>
+                                    <option value="1">Đúng (Có)</option>
+                                    <option value="0">Sai (Không)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Kết quả điện tâm đồ (Resting ECG)</label>
+                                <select class="form-select" id="restecg" required>
+                                    <option value="" selected disabled>Chọn kết quả ECG</option>
+                                    <option value="0">Bình thường</option>
+                                    <option value="1">Bất thường sóng ST-T</option>
+                                    <option value="2">Phì đại thất trái</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Nhóm 3: Chỉ số vận động & chuyên sâu -->
+                        <h5 class="fw-bold text-secondary mb-3"><i class="bi bi-stopwatch me-2"></i>3. Chỉ số Vận động & Chuyên sâu</h5>
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Nhịp tim tối đa đạt được (Max Heart Rate)</label>
+                                <input type="number" class="form-control" id="thalach" placeholder="Ví dụ: 150" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Đau ngực khi gắng sức (Exercise Angina)</label>
+                                <select class="form-select" id="exang" required>
+                                    <option value="" selected disabled>Chọn tình trạng</option>
+                                    <option value="1">Có</option>
+                                    <option value="0">Không</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Độ chênh ST so với nghỉ (Oldpeak)</label>
+                                <input type="number" step="0.1" class="form-control" id="oldpeak" placeholder="Ví dụ: 1.5" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Độ dốc đoạn ST khi gắng sức (Slope)</label>
+                                <select class="form-select" id="slope" required>
+                                    <option value="" selected disabled>Chọn độ dốc</option>
+                                    <option value="0">Dốc lên (Upsloping)</option>
+                                    <option value="1">Bình thường (Flat)</option>
+                                    <option value="2">Dốc xuống (Downsloping)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Số mạch máu chính (0-3) hiển thị màu</label>
+                                <select class="form-select" id="ca" required>
+                                    <option value="" selected disabled>Chọn số lượng</option>
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="form-label fw-semibold">Tình trạng Thalassemia (Thal)</label>
+                                <select class="form-select" id="thal" required>
+                                    <option value="" selected disabled>Chọn tình trạng</option>
+                                    <option value="1">Bình thường (Normal)</option>
+                                    <option value="2">Khiếm khuyết cố định (Fixed defect)</option>
+                                    <option value="3">Khiếm khuyết hồi phục (Reversible defect)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Nút bấm phân tích -->
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-danger btn-lg px-5 py-3 fw-bold rounded-pill shadow">
+                                <i class="bi bi-heart-pulse me-2"></i> Phân tích Nguy cơ
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+</html>

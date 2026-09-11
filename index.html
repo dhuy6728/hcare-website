@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCare - For Your Heart</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+
+    <div id="navbar-placeholder"></div>
+
+    <main>
+        <!-- HERO BANNER -->
+        <section class="hero-section text-white d-flex align-items-center justify-content-center">
+            <div class="container px-3 text-center">
+                <h1 class="display-4 fw-bold mb-4 hero-title">Sứ mệnh của HCare: Bảo vệ Nhịp đập Sự sống</h1>
+                <p class="lead mb-4 mx-auto" style="max-width: 900px; text-align: justify; font-size: 1.15rem; line-height: 1.6;">
+                    Chúng tôi xây dựng dự án này từ một thực tế khắc nghiệt: phần lớn các ca tử vong do tim mạch đều bắt nguồn từ sự chủ quan. Bệnh tim thường diễn tiến vô cùng âm thầm và không có triệu chứng rõ ràng ở giai đoạn khởi phát. Chúng tôi tạo ra HCare để mang sức mạnh của Trí tuệ Nhân tạo vào y tế dự phòng, giúp bất kỳ ai cũng có thể dễ dàng kiểm tra rủi ro của mình. Việc chủ động theo dõi các chỉ số lâm sàng ngay từ hôm nay là cách duy nhất để bạn "đi trước một bước" với bệnh tật, can thiệp kịp thời và bảo vệ tương lai trọn vẹn bên những người thân yêu.
+                </p>
+            </div>
+        </section>
+
+        <!-- SỐ LIỆU TỪ TỔ CHỨC Y TẾ THẾ GIỚI (WHO) -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2">Báo động từ Tổ chức Y tế Thế giới (WHO)</h2>
+                <p class="text-center text-muted mb-5">Những con số phản ánh thực trạng tim mạch trên toàn cầu</p>
+                <div class="row g-4">
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-danger border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-danger mb-1">17.9 Triệu</h3>
+                            <p class="text-muted small mb-0">Ca tử vong mỗi năm, chiếm 32% tổng số ca tử vong trên toàn thế giới.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-danger border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-danger mb-1">85%</h3>
+                            <p class="text-muted small mb-0">Số ca tử vong tim mạch bắt nguồn trực tiếp từ nhồi máu cơ tim và đột quỵ.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-warning border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-warning mb-1">Nhóm 50+</h3>
+                            <p class="text-muted small mb-0">Là độ tuổi rủi ro cao nhất, nhưng tỷ lệ người trẻ (30-40 tuổi) đang tăng đột biến.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-primary border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-primary mb-1">3/4</h3>
+                            <p class="text-muted small mb-0">Số ca tử vong xảy ra ở các quốc gia có thu nhập thấp và trung bình.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-secondary border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-secondary mb-1">Lối sống</h3>
+                            <p class="text-muted small mb-0">Hút thuốc, ăn mặn, và lười vận động là nguyên nhân gốc rễ gây ra bệnh.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-4">
+                        <div class="p-3 border-start border-success border-4 bg-white h-100 shadow-sm rounded-end">
+                            <h3 class="fw-bold text-success mb-1">Lâm sàng</h3>
+                            <p class="text-muted small mb-0">Huyết áp cao, tiểu đường và béo phì là bệ phóng đẩy nhanh suy tim.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DỮ LIỆU ĐẦU VÀO & NÚT TRẢI NGHIỆM HCARE -->
+        <section class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-5 mb-4 mb-lg-0">
+                        <h2 class="fw-bold mb-3">Tại sao HCare cần thông tin của bạn?</h2>
+                        <p class="text-muted mb-4" style="text-align: justify;">Để AI có thể đưa ra đánh giá chính xác nhất, mô hình phân tích học máy của chúng tôi cần đối chiếu các chỉ số sinh tồn của bạn với hàng ngàn mẫu bệnh án đã được chuẩn hóa. Việc thu thập này mô phỏng lại quá trình khám lâm sàng của một bác sĩ tim mạch.</p>
+                        
+                        <a href="tool.html" class="btn btn-danger btn-lg px-5 py-3 fw-bold shadow hero-btn rounded-pill">
+                            <i class="bi bi-heart-pulse-fill text-white me-2"></i> Trải nghiệm HCare
+                        </a>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-primary"><i class="bi bi-person-vcard me-2"></i>Tuổi & Giới tính</h6>
+                                    <p class="small text-muted mb-0">Tuổi tác làm xơ cứng mạch máu, và hormone giới tính (đặc biệt ở nữ) ảnh hưởng mạnh đến phân bổ mỡ thừa.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-danger"><i class="bi bi-activity me-2"></i>Huyết áp lúc nghỉ</h6>
+                                    <p class="small text-muted mb-0">Áp lực máu cao liên tục sẽ làm rách vi thể thành mạch, tạo điều kiện cho mảng bám hình thành.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-warning"><i class="bi bi-droplet-half me-2"></i>Cholesterol</h6>
+                                    <p class="small text-muted mb-0">Là "thủ phạm" trực tiếp gây ra mảng xơ vữa, làm hẹp lòng mạch vành nuôi cơ tim.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-secondary"><i class="bi bi-lungs me-2"></i>Loại đau ngực</h6>
+                                    <p class="small text-muted mb-0">Biểu hiện lâm sàng rõ rệt nhất. Phân loại cơn đau giúp AI nhận diện đó là do cơ tim thiếu oxy hay do cơ xương khớp.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-success"><i class="bi bi-heart me-2"></i>Điện tâm đồ (ECG)</h6>
+                                    <p class="small text-muted mb-0">Đánh giá hệ thống điện của tim, phát hiện rối loạn nhịp hoặc dấu hiệu phì đại tâm thất.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-3 bg-light rounded-3 h-100">
+                                    <h6 class="fw-bold text-info"><i class="bi bi-stopwatch me-2"></i>Chỉ số khi vận động</h6>
+                                    <p class="small text-muted mb-0">Nhịp tim tối đa và độ chênh ST khi gắng sức cho biết khả năng chịu đựng và mức độ thiếu máu của cơ tim.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CƠ SỞ KHOA HỌC & CÁC BÀI BÁO NỔI BẬT -->
+        <section class="py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-2">Cơ sở Khoa học & Dữ liệu</h2>
+                <p class="text-center text-muted mb-5">Đồ án được xây dựng dựa trên nền tảng của các nghiên cứu y khoa hàng đầu thế giới</p>
+                
+                <div class="row g-4">
+                    <!-- BÀI BÁO 1 -->
+                    <div class="col-12">
+                        <div class="card shadow-sm border-0 article-card p-3 p-md-4 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-danger me-2">Dữ liệu Cốt lõi (Core Dataset)</span>
+                                    <span class="text-muted small"><i class="bi bi-journal-medical me-1"></i>The American Journal of Cardiology (1989)</span>
+                                </div>
+                                <h4 class="card-title fw-bold text-dark mb-3">"International application of a new probability algorithm for the diagnosis of coronary artery disease" (Detrano et al.)</h4>
+                                <p class="card-text text-muted mb-3" style="text-align: justify;">
+                                    Đây là công trình nghiên cứu bản lề do Tiến sĩ Robert Detrano cùng các cộng sự thực hiện tại Viện Cleveland Clinic. Đội ngũ y bác sĩ đã ghi nhận hồ sơ y tế của hàng trăm bệnh nhân với 14 thông số không xâm lấn (như tuổi, giới tính, huyết áp, điện tâm đồ) để xây dựng một thuật toán xác suất chẩn đoán bệnh mạch vành. Dữ liệu từ nghiên cứu này sau đó đã được công bố thành Bộ dữ liệu Cleveland kinh điển trên UCI Machine Learning Repository.
+                                </p>
+                                <a href="https://pubmed.ncbi.nlm.nih.gov/2756873/" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill mt-2">
+                                    <i class="bi bi-link-45deg"></i> Xem bài báo gốc (PubMed)
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BÀI BÁO 2 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card shadow-sm border-0 article-card p-2 h-100">
+                            <div class="card-body d-flex flex-column h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-primary me-2">Dịch tễ học (Epidemiology)</span>
+                                    <span class="text-muted small"><i class="bi bi-journal-text me-1"></i>Annals of Internal Medicine (1961)</span>
+                                </div>
+                                <h5 class="card-title fw-bold text-dark mb-3">"Factors of risk in the development of coronary heart disease" (Kannel WB et al.)</h5>
+                                <p class="card-text text-muted small mb-4" style="text-align: justify;">
+                                    Là bài báo nổi tiếng nhất trích xuất từ Nghiên cứu Framingham (Framingham Heart Study). Đây là công trình đầu tiên trong lịch sử y học đưa ra và chứng minh khái niệm "Yếu tố nguy cơ" (Risk factors) như Huyết áp cao, Cholesterol và Hút thuốc lá là nguyên nhân trực tiếp gây ra bệnh tim.
+                                </p>
+                                <div class="mt-auto">
+                                    <a href="https://pubmed.ncbi.nlm.nih.gov/13751193/" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill">
+                                        <i class="bi bi-link-45deg"></i> Xem bài báo gốc (PubMed)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BÀI BÁO 3 -->
+                    <div class="col-12 col-md-6">
+                        <div class="card shadow-sm border-0 article-card p-2 h-100">
+                            <div class="card-body d-flex flex-column h-100">
+                                <div class="d-flex align-items-center mb-3">
+                                    <span class="badge bg-success me-2">Machine Learning</span>
+                                    <span class="text-muted small"><i class="bi bi-journal-code me-1"></i>PLOS ONE Journal (2017)</span>
+                                </div>
+                                <h5 class="card-title fw-bold text-dark mb-3">"Can machine-learning improve cardiovascular risk prediction using routine clinical data?" (Weng SF et al.)</h5>
+                                <p class="card-text text-muted small mb-4" style="text-align: justify;">
+                                    Một nghiên cứu đột phá trên gần 400.000 bệnh nhân, chứng minh rằng các thuật toán Học máy (như Random Forest, Neural Networks) có khả năng dự đoán nguy cơ tim mạch chính xác vượt trội so với các thang điểm y khoa truyền thống, mở ra kỷ nguyên ứng dụng AI vào chẩn đoán y tế hiện đại.
+                                </p>
+                                <div class="mt-auto">
+                                    <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0174944" target="_blank" class="btn btn-outline-danger btn-sm rounded-pill">
+                                        <i class="bi bi-link-45deg"></i> Xem bài báo gốc (PLOS ONE)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/global.js"></script>
+</body>
+</html>

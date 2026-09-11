@@ -1,0 +1,33 @@
+/* VARIABLES & BASE */
+:root {
+    --bg-white: #ffffff;
+    --light-red: #ffeaec;
+    --brand-red: #d93025;
+    --text-main: #333333;
+}
+
+body {
+    background-color: var(--bg-white);
+    color: var(--text-main);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; 
+}
+
+/* COMPONENTS */
+.custom-header {
+    background-color: var(--light-red);
+}
+
+.brand-text {
+    color: var(--brand-red) !important;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}

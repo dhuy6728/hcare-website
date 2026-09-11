@@ -1,0 +1,62 @@
+/* HERO BANNER STYLING - COMPACT & HIGH CONTRAST */
+.hero-section {
+    background-color: #ffffff;
+    background-image: linear-gradient(to right, #fff5f5, #ffffff);
+    border: 1px solid #ffe3e3;
+    border-left: 6px solid #d93025;
+    padding: 35px 25px;
+    margin: 20px auto;
+    border-radius: 12px;
+    max-width: 1100px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.hero-title {
+    color: #d93025 !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-shadow: none !important;
+}
+
+.hero-section p {
+    color: #495057 !important;
+    text-shadow: none !important;
+    font-size: 1rem !important;
+    line-height: 1.6;
+    margin-bottom: 0 !important;
+}
+
+/* CÁC THẺ CARD VÀ HIỆU ỨNG KHÁC */
+.cause-card, .article-card, .step-card {
+    transition: all 0.3s ease;
+}
+
+.cause-card:hover, .article-card:hover, .step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+.article-card {
+    border-top: 4px solid var(--light-red) !important;
+}
+
+.article-card:hover {
+    border-top: 4px solid var(--brand-red) !important;
+}
+
+/* RESPONSIVE CHO ĐIỆN THOẠI */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 25px 15px;
+        margin: 15px;
+        border-radius: 10px;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-section p {
+        font-size: 0.9rem !important;
+    }
+}
